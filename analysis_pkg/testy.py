@@ -2,7 +2,7 @@ import unittest
 import tempfile
 import pandas as pd
 from pathlib import Path
-import analiza
+from analysis_pkg import analiza
 
 class Testfunkcje(unittest.TestCase):
 

@@ -1,5 +1,5 @@
-import parser
-import analiza
+from analysis_pkg import parser
+from analysis_pkg import analiza
 from pathlib import Path
 import cProfile
 import pstats
