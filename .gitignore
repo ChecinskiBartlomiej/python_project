@@ -1,0 +1,5 @@
+# ignoruj foldery cache i pliki profilowania Pythona
+__pycache__/
+*.pyc
+profile.stats
+profile.txt
