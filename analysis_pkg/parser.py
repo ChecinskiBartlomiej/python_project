@@ -9,7 +9,7 @@ def create_parser():
         '-o', '--output',
         type=Path,
         required=True,
-        help='Ścieżka i nazwa pliku, do którego zapisane zostaną wyniki analizy (np. wyniki.csv)'
+        help='Nazwa pliku, do którego zapisane zostaną wyniki analizy (np. wyniki.csv)'
     )
 
     # argument 2: katalog z danymi
@@ -20,17 +20,14 @@ def create_parser():
         help='Ścieżka do katalogu zawierającego wszystkie pliki danych (.csv, .xls, .xlsx)'
     )
 
-    #argument 3:
+    #argument 3: nazwa pliku profile
     parser.add_argument(
         '-p', '--profile-output',
         type=Path,
         required=True,
-        help="Ścieżka do katalogu zawierającego profilingu"
+        help="Nazwa pliku, do którego zostaną zapisane statystyki profilowania kodu"
     )
 
     return parser
 
-
-
-#python3 parser.py -d ./data/raw -o wyniki.txt -p profile.stats
 

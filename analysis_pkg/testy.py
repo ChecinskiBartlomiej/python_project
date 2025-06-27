@@ -2,7 +2,7 @@ import unittest
 import tempfile
 import pandas as pd
 from pathlib import Path
-import analysis
+import analiza
 
 class Testfunkcje(unittest.TestCase):
 
@@ -29,7 +29,7 @@ class Testfunkcje(unittest.TestCase):
         pass
     def test_uporzadkuj_dane(self):
 
-        df_area, _, _, df_population = analysis.uporzadkuj_dane(
+        df_area, _, _, df_population = analiza.uporzadkuj_dane(
             self.df_area.copy(),
             self.df_fires.copy(),
             self.df_alcohol.copy(),
@@ -64,7 +64,7 @@ class Testfunkcje(unittest.TestCase):
         #Sprawdzamy czy wszystkie statystyki wystepuja.
         with tempfile.NamedTemporaryFile(mode='w+', delete=True) as tmp:
             output = Path(tmp.name)
-            analysis.oblicz_statystyki(df_area, df_fires, df_alcohol, df_population, output)
+            analiza.oblicz_statystyki(df_area, df_fires, df_alcohol, df_population, output)
             tmp.seek(0) #wskaznik na poczatek pliku tekstowego
             content = tmp.read()
             self.assertIn('=== Powierzchnia województw ===', content)
@@ -100,7 +100,7 @@ class Testfunkcje(unittest.TestCase):
         #Sprawdzamy czy wystepuje konkretny napis ktory powinien wystapic.
         with tempfile.NamedTemporaryFile(mode='w+', delete=True) as tmp:
             output = Path(tmp.name)
-            analysis.hipotezy(
+            analiza.hipotezy(
                 df_area, df_fires, df_alcohol, df_population, output
             )
             tmp.seek(0) 

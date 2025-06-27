@@ -1,14 +1,14 @@
 import parser
-import analysis
+import analiza
 from pathlib import Path
 import cProfile
 import pstats
 
 def run(data_dir: Path, output_file: Path):
-    df_area, df_fires, df_alcohol, df_population = analysis.wczytaj_dane(data_dir)
-    df_area, df_fires, df_alcohol, df_population = analysis.uporzadkuj_dane(df_area, df_fires, df_alcohol, df_population)
-    analysis.oblicz_statystyki(df_area, df_fires, df_alcohol, df_population, output_file)
-    analysis.hipotezy(df_area, df_fires, df_alcohol, df_population, output_file)
+    df_area, df_fires, df_alcohol, df_population = analiza.wczytaj_dane(data_dir)
+    df_area, df_fires, df_alcohol, df_population = analiza.uporzadkuj_dane(df_area, df_fires, df_alcohol, df_population)
+    analiza.oblicz_statystyki(df_area, df_fires, df_alcohol, df_population, output_file)
+    analiza.hipotezy(df_area, df_fires, df_alcohol, df_population, output_file)
 
 def main():
     args = parser.create_parser().parse_args()
@@ -19,7 +19,7 @@ def main():
     if not data_dir.is_dir():
         raise SystemExit(f"Katalog nie istnieje")
 
-    #Uruchomienie kodu pod profilerem cProfile.
+    #Uruchomienie kodu profilerem cProfile.
     cProfile.runctx(
         'run(data_dir, output_file)',
         globals(), locals(),
@@ -48,7 +48,7 @@ def main():
 if __name__ == '__main__':
     main()
     
-#python3 presentation.py -d ./data/raw -o wyniki.txt -p profile.stats
+#python3 prezentacja.py -d ./data/raw -o wyniki.txt -p profile.stats
 
 
 
