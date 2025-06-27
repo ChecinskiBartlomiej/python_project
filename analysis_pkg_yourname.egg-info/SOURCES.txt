@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+analysis_pkg/__init__.py
+analysis_pkg/analysis.py
+analysis_pkg/parser.py
+analysis_pkg/presentation.py
+analysis_pkg/tests.py
+analysis_pkg_yourname.egg-info/PKG-INFO
+analysis_pkg_yourname.egg-info/SOURCES.txt
+analysis_pkg_yourname.egg-info/dependency_links.txt
+analysis_pkg_yourname.egg-info/entry_points.txt
+analysis_pkg_yourname.egg-info/requires.txt
+analysis_pkg_yourname.egg-info/top_level.txt

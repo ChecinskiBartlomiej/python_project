@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "analysis_pkg-yourname"
+version = "0.1.0"
+description = "Pakiet do analizy danych PSP, JST, zezwoleń alkoholowych i populacji"
+readme = "README.md"
+requires-python = ">=3.7"
+authors = [ { name = "Bartłomiej Chęciński", email = "bc438397@students.mimuw.edu.pl" } ]
+license = { text = "MIT" }
+keywords = [ "analiza", "PSP", "JST", "alkohol", "populacja" ]
+dependencies = [
+"pandas>=1.0",
+"openpyxl",
+"xlrd"
+]
+
+[project.urls]
+Homepage = "https://github.com/ChecinskiBartlomiej/python_project"
+
+[project.scripts]
+run-analysis = "analysis_pkg.presentation:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["analysis_pkg*"]
+
+[tool.setuptools.package-data]
+"analysis_pkg" = ["data/raw/", "profiling/"]
+
+[project.optional-dependencies]
+tests = [
+"pytest",
+"pytest-cov"
+]

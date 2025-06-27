@@ -1,0 +1,44 @@
+=== Powierzchnia województw ===
+             Pow_ha       Pow_km2
+count  1.600000e+01     16.000000
+mean   1.962081e+06  19620.875000
+std    6.829364e+05   6829.347815
+min    9.411550e+05   9412.000000
+25%    1.488458e+06  14885.000000
+50%    1.888287e+06  18883.000000
+75%    2.322539e+06  23225.250000
+max    3.555861e+06  35559.000000
+
+=== Populacja ===
+count    1.600000e+01
+mean     2.343068e+06
+std      1.294816e+06
+min      9.302960e+05
+25%      1.301377e+06
+50%      2.029718e+06
+75%      3.008452e+06
+max      5.508322e+06
+
+=== Liczba pożarów ===
+count       16.000000
+mean      6477.437500
+std       3724.068402
+min       2641.000000
+25%       3904.750000
+50%       5447.500000
+75%       7058.750000
+max      17321.000000
+
+=== Liczba firm ===
+count     16.000000
+mean      26.000000
+std       30.813417
+min        4.000000
+25%       10.750000
+50%       14.000000
+75%       30.250000
+max      129.000000
+Korelacja Pearsona między liczbą mieszkańców a liczbą pożarów: 0.925
+Korelacja Pearsona między liczbą mieszkańców a liczbą firm: 0.882
+Korelacja Pearsona między liczbą firm a liczbą pożarów: 0.871
+Korelacja Pearsona między powierzchnią a liczbą mieszkańców: 0.500

@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: analysis_pkg-yourname
+Version: 0.1.0
+Summary: Pakiet do analizy danych PSP, JST, zezwoleń alkoholowych i populacji
+Author-email: Bartłomiej Chęciński <bc438397@students.mimuw.edu.pl>
+License: MIT
+Project-URL: Homepage, https://github.com/ChecinskiBartlomiej/python_project
+Keywords: analiza,PSP,JST,alkohol,populacja
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: pandas>=1.0
+Requires-Dist: openpyxl
+Requires-Dist: xlrd
+Provides-Extra: tests
+Requires-Dist: pytest; extra == "tests"
+Requires-Dist: pytest-cov; extra == "tests"
+
+# python_project
