@@ -19,7 +19,7 @@ dependencies = [
 Homepage = "https://github.com/ChecinskiBartlomiej/python_project"
 
 [project.scripts]
-run-analysis = "analysis_pkg.presentation:main"
+run-analysis = "analysis_pkg.prezentacja:main"
 
 [tool.setuptools.packages.find]
 where = ["."]
