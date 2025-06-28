@@ -1,2 +1,0 @@
-[console_scripts]
-run-analysis = analysis_pkg.presentation:main

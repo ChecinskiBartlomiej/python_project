@@ -102,9 +102,13 @@ def hipotezy(df_area, df_fires, df_alcohol, df_population, output_file: Path):
     corr4 = new_df['Powierzchnia_km2'].corr(new_df['Liczba_mieszkancow'])
 
     with open(output_file, 'a', encoding='utf-8') as f:
+        f.write(f"Hipoteza 1: liczba mieszkańców jest pozytywnie skorelowana z liczbą pożarów\n")
         f.write(f"Korelacja Pearsona między liczbą mieszkańców a liczbą pożarów: {corr1:.3f}\n")
+        f.write(f"Hipoteza 2: Liczba mieszkańców jest pozytywnie skorelowana z liczbą przedsiębiorstw mających zezwolenie na handel hurtowy napojami alkoholowymi\n")
         f.write(f"Korelacja Pearsona między liczbą mieszkańców a liczbą firm: {corr2:.3f}\n")
+        f.write(f"Hipoteza 3: Liczba pożarów jest pozytywnie skorelowana z liczbą przedsiębiorstw mających zezwolenie na handel hurtowy napojami alkoholowymi\n")
         f.write(f"Korelacja Pearsona między liczbą firm a liczbą pożarów: {corr3:.3f}\n")
+        f.write(f"Hipoteza 4: Powierzchnia jest pozytywnie skorelowana z liczbą mieszkańców\n")
         f.write(f"Korelacja Pearsona między powierzchnią a liczbą mieszkańców: {corr4:.3f}\n")
 
 

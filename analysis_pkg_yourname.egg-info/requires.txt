@@ -1,7 +1,0 @@
-pandas>=1.0
-openpyxl
-xlrd
-
-[tests]
-pytest
-pytest-cov
